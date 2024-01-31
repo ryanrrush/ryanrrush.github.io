@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 3: Accessibility Check</title>
+    <!-- Bootstrap CSS Code -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+
+<!-- Main Container Div that provides padding -->
+<div class="container"> 
+<h1>Accessibility Testing on California State University, Channel Islands - John Spoor Broome Library</h1>
+
+<p>
+    Name: Ryan Rush <br>
+    Class Project: Accessibility Testing For California State University, Channel Islands - John Spoor Broome Library<br>
+    Website: <a href="https://library.csuci.edu/">https://library.csuci.edu/</a>  <br>
+    Date: January 29, 2024
+</p>
+
+
+<p>
+    My name is Ryan Rush and I am a current Master of Library and Information Science student at the University of Denver. I’m currently in a web content management course and we have an assignment where we are learning about web accessibility. As a part of this assignment we are required to review a school or library website for web accessibility. 
+    <br>
+    <br>
+    We are using the W3C Web Accessibility <a href="https://www.w3.org/WAI/test-evaluate/preliminary/">Easy Checks – A Frist Review of Web Accessibility</a> as our guide in addition to the WAVE extension tool for Google Chrome. Through our review of your site, some areas we looked at pertain to headings, alternative text, color contrast, and keyboard accessibility, as well as a few other areas.  
+    
+</p>
+
+<h2>Accessibility Checklist</h2>
+
+<!-- Webpage title-->
+<h3>Website Page Titles</h3>
+<p>When creating webpages, there is a <code>&lt;title&gt;</code> code within web pages that states what the title of the page is. This is often presented at the top of the browser tab. If the mouse is rolled over this, the full page title is often displayed. It is important to have a good title structure in your webpages so that a perosn navigating your site will properly know which page they are on. </p>
+
+<p class="alert alert-success" role="alert">Results: <i class="bi bi-hand-thumbs-up-fill"></i> 14 pages on the John Spoor Broome Library website were evaluated for clear, unique HTML page titles. Each page has descriptive HTML title values. We do recommend that all the title values be formatted in a similar fashion. The home page has an excellent title structure as &quot;Home -John Spoor Broome Library - CSU Channel Islands	&quot; whereas others like the course reserves page just says &OpenCurlyDoubleQuote;Course Reserves&CloseCurlyDoubleQuote;. We recommend all page titles follow a structure like the home page.</p>
+
+<!-- Alternative Text-->
+<h3>Image Text Alternatives</h3>
+<p>Items like pictures, illustrations, charts, etc. require alternative text. This is text that describes what the important information this particular object is supposed to convey. For individuals using a screen reader, they may not be able to visually see this item and rely on the alternative text to read back to them what information is contained within the image, illustration, chart, etc.</p>
+
+<p class="alert alert-warning" role="alert">Results: <i class="bi bi-hand-thumbs-up-fill"></i> <i class="bi bi-hand-thumbs-down-fill"></i> There are some photos on the home page that have no alternative text. These are for the Study Rooms, Ask a Librarian, and Equipment Checkout sections. This may make it difficult for patrons using an assistive technology to know what the photo is. If these do not provide meaningful information, the term &quot;decorative&quot; may be appropriate. Photos on other pages have alternative text included.</p>
+
+<!-- Text -->
+<h3>Text:</h3>
+ <p>The headings, color contrast, and text resizing are important aspects of accessibility for web pages. These assist users who might otherwise have difficulty seeing or interacting with the text.</p>
+
+<p class="alert alert-warning" role="alert">Results - Headings<i class="bi bi-hand-thumbs-up-fill"></i><i class="bi bi-hand-thumbs-down-fill"></i> 
+On the home page there is no H1 tag. The rest of the pages searched all had proper headings starting with H1. A possible spot for the H1 tag on the home page could be &quot;John Spoor Broom Library&quot; at the top of the page. This will allow proper navigation back to the top of the page for screen readers. </p>
+
+<div class="alert alert-success" role="alert">
+<p>Results - Contrast Ratio  <i class="bi bi-hand-thumbs-up-fill"></i> Throughout the site we are getting warnings of color contrast errors. A visual inspection says this is incorrect. Upon a deeper inspection, it appears the error may come from a hidden color or the opacity settings on the red background and whtie text. This could be corrected within the HTML coding of the sections. </p>
+</div>
+
+<div class="alert alert-success" role="alert">
+<p>Results - Resizing Text  <i class="bi bi-hand-thumbs-up-fill"></i>Resizing text is important for individuals who have a difficulty seeing text on a webpage. The text on the various pages tested for the John Spoor Broome Library resulted in positive resizing results. </p>
+</div>
+
+<!-- Interactions -->
+ <h3>Interaction:</h3>
+ <h4>Keyboard access and visual focus </h4>  
+ <p>There are some who cannot use a mouse to navigate the webpage and need to rely on a keyboard for navigation. Keyboard navigation needs to be clear and follow a structured path through the elements.</p>
+
+ <!-- red success div -->
+ <div class="alert alert-success" role="alert">
+<p>Results: <i class="bi bi-hand-thumbs-up-fill"></i> Using only keyboard keys to navigate the John Spoor Broome Library website yeilded excelent results. It was easy and simple to navigate various webpages using the tab key. </p>
+</div>
+
+
+<h4>Forms, labels, and errors (including Search fields): </h4>
+Forms include items like e-mail address boxes, login boxes, and search boxes. Each form needs to be labeled properly with a a label element as well as value and id attribute fields.
+For example:
+<ul>
+    <li>Each form control has a <code>label</code> element with a <code>for</code> attribute that  matches the value of the <code>id</code> attribute in the related control. For example:<br>
+        <code>&lt;label for="firstname"&gt;First name: &lt;/label&gt;<br>
+        &lt;input type="text" name="firstname" id="firstname" /&gt;<br>
+        </code> </li>
+        <li>Each <code>id</code> is unique within the web page.</li>
+</ul>
+<div class="alert alert-success" role="alert">
+<p>Results <i class="bi bi-hand-thumbs-up-fill"></i> of the various pages that we tested, we only found the "search library" field at the top. This is keyboard accessible and has proper labels for assistive devices.</p>
+</div>
+
+<!-- Visual aspects -->
+ <h3>General:</h3>
+ <p>Moving, Flashing, or Blinking Content can be difficult for individuals with certain visual disabilites. Things like videos, scrolling feeds, and even stock tickers can be difficult to navigate. Users need to be able to control this content using a keyboard.</p>
+ 
+ <div class="alert alert-success" role="alert">
+ <p>Results: <i class="bi bi-hand-thumbs-up-fill"></i> Of the various pages that we tested, we found no flashing, moving, or blinking content. If you plan to implement this type of content into your webpages, be sure to follow accessiblity guidelines similar to the ones at <a href="https://www.w3.org/WAI/test-evaluate/preliminary/#forms">Easy Checks – A Frist Review of Web Accessibility</a> for any flashing, moving, or blinking content.</p>
+</div>
+
+
+ <p>Multimedia (video, audio) closed captions and transcripts</p>
+ <div class="alert alert-success" role="alert">
+ <p>Results: <i class="bi bi-hand-thumbs-up-fill"></i> We found no videos on the pages checked. If you plan to include videos on your webpages, be sure to follow accessiblity guidelines similar to the ones at <a href="https://www.w3.org/WAI/test-evaluate/preliminary/#forms">Easy Checks – A Frist Review of Web Accessibility</a> for videos. Videos will want to have proper and accurate closed captioning and transcripts. </p>
+</div>
+
+ <p>Structural checks of a webpage allows individuals to see how content is ordered and accessed. By removing viewing a page without various layouts, styles, or even images is a way to check the flow of the webpage.</p>
+
+<div class="alert alert-success" role="alert">
+<p>Results: <i class="bi bi-hand-thumbs-up-fill"></i> Using the WAVE browser extension form Google Chrome, we were able to remove the CSS on your webpages. This allowed us a look at the structure of the page in a line and see how the headings were nested within one another, alternative text for photos, etc. If you would like more information about basic structural checks for your webpages, you can view them at <a href="https://www.w3.org/WAI/test-evaluate/preliminary/#forms">Easy Checks – A Frist Review of Web Accessibility</a>.</p>
+</div>
+ 
+
+<h3>In Summary</h3>
+<p>Thank you for allowing us to review your webpage. Issues noted can be resolved in simple and meaningful ways. Below are some resources to assist in future web page designs.</p>
+
+ <h2>Related Articles:</h2>
+ <ul>
+<li><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">W3C Web Accessibility Initiative (WAI)</a></li>
+<li><a href="https://www.w3.org/WAI/standards-guidelines/">W3C Accessibility Standards Overview</a></li>
+<li><a href="https://wave.webaim.org/">WAVE Web Accessibility Evaluation Tool</a></li>
+<li><a href="https://adata.org/ocr-videos">The U.S. Department of Education’s Office for Civil Rights – Video Series</a></li>
+<li><a href="https://www.w3.org/WAI/test-evaluate/">Evaluating Web Accessibility Overview</a></li>
+</ul>
+
+
+</div> 
+</body>
+</html>
